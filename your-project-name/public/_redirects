@@ -1,0 +1,3 @@
+ 
+# Redirect all 404 errors to /index.html (useful for single-page applications)
+/*  /index.html  200
