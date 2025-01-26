@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e6f0ff;
+  color: #4a5568;
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header styles */
+.header {
+  background-color: #1e40af;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.header:hover {
+  background-color: #1c3d9e;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.header button:hover {
+  color: #cbd5e0;
+}
+
+/* Calculator section */
+.calculator-section {
+  padding: 3rem 0;
+  background-color: #e6f0ff;
+  border-top: 5px solid #1e40af;
+}
+
+.calculator-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.calculator-card:hover {
+  transform: scale(1.05);
+}
+
+.calculator-card h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 1rem;
+}
+
+/* Inputs and selects styling */
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+  outline: none;
+  border-color: #4c9aff;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Buttons */
+.calculate-btn,
+.proceed-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.calculate-btn {
+  background-color: #1e40af;
+  color: white;
+}
+
+.calculate-btn:hover {
+  background-color: #1c3d9e;
+  transform: translateY(-2px);
+}
+
+.proceed-btn {
+  background-color: #16a34a;
+  color: white;
+}
+
+.proceed-btn:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  transform: scale(0.8);
+  animation: popup-animation 0.3s forwards;
+}
+
+.popup-content h3 {
+  text-align: center;
+}
+
+@keyframes popup-animation {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.popup-content h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e40af;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.popup-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.popup-content .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.popup-content button {
+  padding: 0.75rem 1.5rem;
+  background-color: #1e40af;
+  color: white;
+  font-size: 1.125rem;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.popup-content button:hover {
+  background-color: #1c3d9e;
+  transform: translateY(-2px);
+}
+
+.popup-content .close-btn {
+  background-color: #e5e7eb;
+  color: #4a5568;
+  margin-right: 1rem;
+}
+
+.popup-content .close-btn:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .calculator-card {
+    padding: 1.5rem;
+  }
+
+  .calculator-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .calculate-btn,
+  .proceed-btn {
+    font-size: 0.875rem;
+  }
+}
+
+/* Styling for the Go to Login link */
+.login-link-container {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #2d3436;
+}
+
+.login-link-container span {
+  color: #4a5568;
+}
+
+.login-link {
+  color: #1e40af;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.login-link:hover {
+  color: #4c9aff;
+  transform: translateY(-2px);
+}
+
+.login-link-container a:focus {
+  outline: none;
+}
+/* Popup response message */
+.response-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #e6f4f1;
+  border: 1px solid #b0e6da;
+  border-radius: 5px;
+  color: #2c7c61;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.response-message p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.login-link-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-link {
+  color: #1e40af;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.login-link:hover {
+  color: #4c9aff;
+}
