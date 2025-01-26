@@ -99,6 +99,7 @@ const Login = () => {
         {/* Optional: Forgot Password and Signup Link */}
         {/* <a href="#" className="forgot-password">Forgot your password?</a> */}
         {/* <p className="signup-link">Don’t have an account? <a href="/signup">Sign up</a></p> */}
+        
       </div>
     </div>
   );
