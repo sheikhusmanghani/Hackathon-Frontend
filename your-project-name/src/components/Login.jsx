@@ -72,7 +72,10 @@ const Login = () => {
           </div>
           {/* Password Input */}
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">
+              Password{" "}
+              <span style={{ fontSize: "13px" }}> (Given via Email) </span>
+            </label>
             <input
               type="password"
               id="password"
